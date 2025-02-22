@@ -1,0 +1,21 @@
+<article class="product__card">
+  <div class="img__product">
+    <img src="/assets/{{ product.image }}" alt="">
+  </div>
+
+  <div class="data__product">
+    <div>
+      <h3 class="title__product">{{ product.title }}</h3>
+      <p class="price__product">${{ product.price }} USD</p>
+    </div>
+    <button class="card__button fas fa-shopping-cart"></button>
+  </div>
+
+  {% if product.tags %}
+    <ul class="tags">
+      {% for tag in product.tags %}
+        <li><span class="fa-solid fa-diamond"></span> {{ tag }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</article>

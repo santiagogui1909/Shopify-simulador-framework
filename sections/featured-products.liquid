@@ -1,0 +1,13 @@
+<section class="featured-products">
+  <div class="product-list">
+    {% for product in products %}   
+      <div class="product-card {% if forloop.index > 4 %}hidden{% endif %}"> {% comment %} Limit used to determine the number of products to display {% endcomment %}
+        {% render 'product-card', product: product %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<div class="btn__view__all">
+  <button id="loadMore">{{ "view all" | upcase}}</button>
+</div>

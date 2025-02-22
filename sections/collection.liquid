@@ -1,0 +1,12 @@
+<section class="container__collections">
+
+    <h2><span class="fa-solid fa-diamond"></span> {{ "latest collection" | upcase }} <span class="fa-solid fa-diamond"></span></h2>
+
+    <div class="collection__list">
+        {% for collection in collections %}
+            {% if collection.created_at > '2025-01-01' %}
+                {% render 'collection-card', collection: collection %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

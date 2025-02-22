@@ -1,0 +1,461 @@
+
+body{
+  background-color: #1B1B1B;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Style for header */
+.header__container{
+  background-color: #1E1D20;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  transition: background 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.header__container.scroll{
+  background-color: #1e1d20a0;
+  backdrop-filter: blur(20px);
+}
+
+.header__container .fa-diamond{
+  border-bottom: 3px solid #856FFB;
+  border-top: 3px solid #856FFB;
+  border-radius: 10px;
+  color: #856FFB;
+  font-size: 0.800rem;
+  padding: 5px 2px;
+  position: relative;
+  bottom: 4px;
+}
+
+.logo{
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.logo .logo__store{
+  color: #ffffff;
+  font-weight: 500;
+  font-family: fantasy;
+  border-left: 1px solid #856FFB;
+  padding-left: 10px;
+  letter-spacing: 2px;
+}
+
+.payment__list{
+  background-color: #151515;
+  border: 1px solid #856FFB;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0px 15px;
+  width: auto;
+}
+
+.payment__list p{
+  color: #ffffff;
+  font-size: 0.700rem;
+  text-transform: capitalize;
+}
+
+.payment__list li{
+  border-radius: 100%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.700rem;
+  margin: 8px 0px;
+  padding: 2px 4px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  height: 14px;
+  text-align: center;
+}
+
+/* The colors specify for each money */
+.fa-bitcoin {
+  background-color: #f7931a;
+}
+
+.fa-ethereum {
+  background-color: #62688f;
+}
+
+.fa-litecoin-sign {
+  background-color: #b8b8b8;
+}
+
+.fa-d {
+  background-color: #c2a633;
+}
+
+.fa-dollar-sign {
+  background-color: #2775ca;
+}
+
+/* Hover effect on icons */
+.payment__list li:hover {
+  transform: scale(1.2);
+}
+
+/* Menu link and shopping cart */
+
+.nav__links{
+  color: #ffffff;
+  font-size: 0.800rem;
+  font-weight: bold;
+  margin: 0px 10px;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.6s ease;
+}
+
+.nav__links:hover{
+  color: #762BFB;
+}
+
+.nav__button{
+  background-color: #762BFB;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #151515;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+
+.nav__button:active{
+  box-shadow: 0px 0px 0px #15151540;
+  transform: scale(0.90);
+}
+
+/* Style for top bar */
+
+.top__bar {
+  width: 100%;
+  background: #762BFB;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.marquee {
+  display: flex;
+  width: 100%;
+  animation: marquee 20s linear infinite; /* Allows the animation to be infinite */
+}
+
+.marquee__content {
+  display: flex;
+  min-width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.marquee p {
+  color: #fff;
+  font-size: 0.870rem;
+  margin: 0 20px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.marquee p span{
+  color: #856FFB;
+}
+
+.marquee:hover {
+  cursor: pointer;
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%); /* show the 100% of container */
+  }
+}
+
+/* Hero banner */
+
+.hero__banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 20px auto;
+  height: 500px;
+  width: 82%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  animation: showImage 1.5s ease;
+}
+
+.btn__hero__banner{
+  background-color: #762BFB;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  position: relative;
+  right: 40%;
+  top: 40%;
+  text-decoration: none;
+  transition: all 0.5s ease
+}
+
+.btn__hero__banner:hover{
+  background-color: #1E1D20;
+}
+
+.hero__banner__marquee{
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.hero__marquee__content {
+  display: flex;
+  min-width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  animation: marquee 20s linear infinite;
+}
+
+.hero__marquee__content p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 3rem;
+  margin: 0 20px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  text-transform: uppercase;
+}
+
+.hero__marquee__content p span{
+  color: #856FFB;
+}
+
+.hero__marquee__content:hover {
+  cursor: pointer;
+  animation-play-state: paused;
+}
+
+/* Animation for show images, used a scale of 0 to 1 */
+@keyframes showImage {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* style for list of products */
+
+.featured-products{
+  margin: 0px auto;
+  width: 90%;
+}
+
+.product-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 0px 50px;
+}
+
+.product__card{
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: showImage;
+  animation-range: entry 20% cover 40%;
+  animation-fill-mode: both;
+  margin: 20px 0px;
+  position: relative;
+  bottom: 0px;
+  width: auto;
+  transition: all 2s ease-in-out;
+}
+
+.img__product {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.img__product img {
+  border: 2px solid #762BFB;
+  border-radius: 4px;
+  box-shadow: 0px 0px 2px #762BFB;
+  cursor: pointer;
+  height: 350px;
+  width: 260px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.img__product:hover img {
+  transform: scale(1.1);
+}
+
+.data__product{
+  display: flex;
+  justify-content: space-between;
+}
+
+.title__product{
+  color: #ffffff;
+  font-size: 0.750rem;
+}
+
+.price__product{
+  color: #ffffff;
+  font-size: 0.750rem;
+}
+
+.card__button{
+  border-radius: 100%;
+  border: none;
+  background-color: #762BFB;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.card__button:hover{
+  background-color: #4d4d4d;
+}
+
+.tags{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tags li{
+  color: #ffffff;
+  list-style: none;
+}
+
+.tags li span{
+  color: #762BFB;
+  font-size: 0.800rem;
+  list-style: none;
+}
+
+.btn__view__all{
+  margin: 10px auto;
+  width: 140px;
+}
+
+.btn__view__all button{
+  background-color: #762BFB;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 30px 0px;
+  padding: 10px 0px;
+  text-decoration: none;
+  width: 140px;
+}
+
+.container__collections{
+  margin: 60px auto;
+  width: 90%;
+}
+
+.container__collections h2{
+  color: #ffffff;
+  font-family: fantasy;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.container__collections span{
+  color: #762BFB;
+}
+
+.collection__list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.img__collection {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #151515;
+  margin: 10px 0px;
+  height: 300px;
+  width: 44%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  bottom: 0px;
+  overflow: hidden;
+  transition: all 1s ease;
+}
+
+.img__collection:hover{
+  box-shadow: 0px 0px 10px #762BFB;
+  position: relative;
+  bottom: 30px;
+}
+
+.img__collection::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000062;
+  border-radius: 5px;
+}
+
+.img__collection h3 {
+  position: relative;
+  right: 30%;
+  top: 35%;
+  z-index: 2;
+}
