@@ -1,5 +1,5 @@
 <footer>
-    <section>
+    <section class="item footer__logo">
         <div>
             <span class="fa-solid fa-diamond"></span>
             <span class="logo__store__footer">{{ "store" | upcase }}</span>
@@ -8,17 +8,17 @@
         <p class="info__contact">© <span id="year"></span>, shuffle.store operated by <br> studio plaid. need help? <br> email support@shuffle.store</p>
     </section>
 
-    <section class="links__footer">
+    <section class="links__footer item">
         <nav>
             <article class="link__primary">
                 {% for link in settings['footer'].settings.links limit:4 %}
-                    <a href="{{ link.url}}">{{ link.label | upcase }}</a>
+                    <a href="#{{ link.url}}">{{ link.label | upcase }}</a>
                 {% endfor %}
             </article>
                 
             <article class="link__secundary">
                 {% for link in settings['footer'].settings.links offset:4 %}
-                    <a href="{{ link.url}}">{{ link.label | upcase }}</a>
+                    <a href="#{{ link.url}}">{{ link.label | upcase }}</a>
                 {% endfor %}
             </article>
         </nav>
@@ -33,7 +33,7 @@
         </ul>
     </section>
 
-    <section>
+    <section class="item">
         <p class="text__subscribe">Subscribe and receive drop notifications</p>
 
         <form class="input__container">

@@ -57,3 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 });
 
+//Menu hamburguer 
+document.querySelector(".nav__toggle").addEventListener("click", function () {
+  document.querySelector(".nav__menu").classList.toggle("active");
+});
