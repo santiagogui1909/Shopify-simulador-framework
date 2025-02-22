@@ -1,7 +1,8 @@
-<section class="featured-products">
+<section id="/collections/all" class="featured-products">
   <div class="product-list">
     {% for product in products %}   
-      <div class="product-card {% if forloop.index > 4 %}hidden{% endif %}"> {% comment %} Limit used to determine the number of products to display {% endcomment %}
+      {% comment %} Limit used to determine the number of products to display, the rest adds the hidden class {% endcomment %}
+      <div class="product-card {% if forloop.index > 4 %}hidden{% endif %}">
         {% render 'product-card', product: product %}
       </div>
     {% endfor %}

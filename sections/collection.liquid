@@ -4,9 +4,10 @@
 
     <div class="collection__list">
         {% for collection in collections %}
-            {% if collection.created_at > '2025-01-01' %}
+            {% if collection.created_at > '2025-01-01' %}  {% comment %} Go through the data and validate that it only shows those from the date greater than 2025-01-01 {% endcomment %}
                 {% render 'collection-card', collection: collection %}
             {% endif %}
         {% endfor %}
     </div>
 </section>
+

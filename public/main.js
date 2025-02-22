@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     hiddenProducts.forEach((product) => {
       if (count < hiddenProducts.length) {
+        // Go through the products that have the hidden class, if the call to action is activated, remove the class from each element so that it is shown
         product.classList.remove("hidden");
         count++;
       }
@@ -48,5 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
       loadMoreBtn.style.display = "none";
     }
   });
+
+  // Determine the date each year automatically.
+  window.addEventListener("load", function () {
+    let date = new Date();
+    document.getElementById('year').innerText = date.getFullYear();
+  })
 });
 

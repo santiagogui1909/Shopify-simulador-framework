@@ -1,6 +1,6 @@
 
 body{
-  background-color: #1B1B1B;
+  background-color: #1a1a1a;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
@@ -41,7 +41,7 @@ body{
   font-weight: normal;
 }
 
-.logo .logo__store{
+.logo__store{
   color: #ffffff;
   font-weight: 500;
   font-family: fantasy;
@@ -458,4 +458,167 @@ body{
   right: 30%;
   top: 35%;
   z-index: 2;
+}
+
+/* Styles for footer */
+
+footer{
+  display: grid;
+  grid-template-columns: 20% 50% 20%;
+  gap: 50px;
+  margin: 0px auto;
+  width: 80%;
+}
+
+footer .fa-diamond{
+  border-bottom: 3px solid #856FFB;
+  border-top: 3px solid #856FFB;
+  border-radius: 10px;
+  color: #856FFB;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  padding: 5px 2px;
+  position: relative;
+  bottom: 4px;
+}
+
+.logo__store__footer{
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: fantasy;
+  border-left: 1px solid #856FFB;
+  padding-left: 20px;
+  letter-spacing: 2px;
+}
+
+.info__contact{
+  color: #ffffff;
+  font-size: 0.550rem;
+  margin-top: 40px;
+  text-transform: capitalize;
+}
+
+.links__footer  nav article{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.links__footer  nav article{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.link__primary a{
+  border-bottom: 2px solid transparent;
+  color: #ffffff;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+.link__primary a:hover{
+  border-bottom: 2px solid #762BFB;
+}
+
+.link__secundary a{
+  color: #ffffff;
+  font-size: 0.500rem;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+.link__secundary a:hover{
+  color: #762BFB;
+}
+
+.payment__list__footer{
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0px 15px;
+  width: auto;
+}
+
+.payment__list__footer p{
+  color: #ffffff;
+  font-size: 0.600rem;
+  text-transform: capitalize;
+}
+
+.payment__list__footer li{
+  border-radius: 100%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.700rem;
+  margin: 8px 0px;
+  padding: 2px 4px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  height: 14px;
+  text-align: center;
+}
+
+/* Hover effect on icons */
+.payment__list__footer li:hover {
+  transform: scale(1.2);
+}
+
+.text__subscribe{
+  color: #ffffff;
+  font-size: 0.700rem;
+}
+
+.input__container {
+  display: flex;
+  align-items: center;
+  background-color: #222024;
+  padding: 10px 15px;
+  border-radius: 8px;
+  width: 200px;
+}
+
+.input__container input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.input__container input::placeholder {
+  color: gray;
+  text-transform: capitalize;
+}
+
+.arrow {
+  color: #7d2ae8;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.input__container input::placeholder {
+  color: gray;
+}
+
+.social__links {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.social__links a {
+  color: #ffffff;
+  font-size: 0.600rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.social__links a:hover {
+  color: #762BFB;
 }
