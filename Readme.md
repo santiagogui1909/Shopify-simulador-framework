@@ -1,145 +1,43 @@
-# Shopify Simulator Documentation
 
-Welcome to **Shopify Simulator**, a lightweight environment designed to help developers explore Shopify's Liquid templating language and dynamic section-based architecture. This project simulates Shopify's core functionalities, enabling developers to practice creating reusable components, iterating through data, and working with dynamic settings.
+# Shopify-simulador-framework (Prueba Tecnica)
 
----
+Se creará una landing page interactiva que incluirá un simulador del lenguaje Liquid con funcionalidades básicas. La página contará con animaciones atractivas y un diseño responsive, asegurando una experiencia fluida en diferentes dispositivos.
 
-## **Project Structure**
+# Características
 
-```
-/simulator
-├── /config
-│   ├── settings_schema.json      # Defines configurable settings for sections
-│   ├── settings_data.json        # Stores dynamic data for rendering sections
-├── /data
-│   ├── products.json             # Sample product data
-│   ├── collections.json          # Sample collection data
-├── /public
-│   ├── styles.css                # Compiled CSS file
-│   ├── main.js                   # Compiled JavaScript file
-├── /sections
-│   ├── featured-products.liquid  # Main section rendering product lists
-├── /snippets
-│   ├── product-card.liquid       # Reusable snippet for individual product cards
-├── /templates
-│   ├── index.liquid              # Main template file
-├── /src
-│   ├── styles.scss               # Base SASS file
-│   ├── app.js                    # Base JavaScript logic
-├── /assets                       # Images for products, banners, and collections
-├── package.json
-├── webpack.config.js
-├── server.js
-```
+- Top bar en movimiento automatico
+- Renderizado de productos con funcionalidad de mostrar todos los resultados
+- Renderizado de colecciones con base a un condicional de fecha
+- Diseño responsivo
+- Menu hamburguesa para facilidad en la navegacion movil
 
----
+# Vista Previa
 
-## **Liquid Basics**
+![iPad-Mini-localhost](https://github.com/user-attachments/assets/586c0352-b166-4223-9a79-1213f1dfb7f8)
 
-Liquid is a templating language used in Shopify to dynamically render content. Below are the key concepts you'll use in this simulator:
+![iPhone-13-(iOS-15)-localhost](https://github.com/user-attachments/assets/6bfe5b82-c9f1-4e22-a63f-e55a0a8d946f)
 
-### **Sections**
+![iPhone-13-(iOS-15)-localhost (1)](https://github.com/user-attachments/assets/0e1ed8ba-0dc0-474b-bd05-fc2325e44562)
 
-Sections are modular components that render specific parts of a page. For example, the `featured-products.liquid` file is a section that displays a list of products. Sections can:
+# Tecnologías Utilizadas
 
-- Access dynamic data from `settings_data.json`.
-- Be configured through a schema defined in `settings_schema.json`.
+- Frontend: Liquid, html, css, js
+- Backend: Node.js
+- Base de Datos: Archivo Json
+- Otros: font-awesome, webpack
 
-Example:
+## 📖 Instalación y Uso
 
-```liquid
-<section class="featured-products">
-  <h2>{{ settings['featured-products'].settings.heading }}</h2>
-</section>
-```
+1. Clonar el repositorio:
+   git clone https://github.com/santiagogui1909/Shopify-simulador-framework.git
+   cd Shopify-simulador-framework
+2. npm install
+3. npm start
+4. Acceder a http://localhost:3000/
 
-### **Snippets**
 
-Snippets are reusable components, such as a product card. You can include a snippet using the `{% render %}` tag:
+### 🔧 Requisitos previos
 
-Example:
-
-```liquid
-<div class="product-list">
-  {% for product in products %}
-    {% render 'product-card', product: product %}
-  {% endfor %}
-</div>
-```
-
-### **Iterating Over Objects**
-
-Liquid allows you to iterate over arrays, such as products or collections:
-
-```liquid
-<ul>
-  {% for product in products %}
-    <li>{{ product.title }} - ${{ product.price }}</li>
-  {% endfor %}
-</ul>
-```
-
-### **Filters**
-
-Filters are used to manipulate output. Some common filters:
-
-- `capitalize`: Capitalizes the first letter.
-- `date`: Formats a date.
-- `money`: Formats a number as currency.
-
-Example:
-
-```liquid
-{{ product.price | money }}
-{{ product.created_at | date: "%B %d, %Y" }}
-```
-
----
-
-## **Dynamic Configuration**
-
-### **Schema (`settings_schema.json`)**
-
-The schema defines the settings available for a section. While it's necessary in Shopify, it might not be required here.
-
-### **Data (`settings_data.json`)**
-
-This file contains the dynamic values for settings
-
-## **Setup Instructions**
-
-### **Install Dependencies**
-
-```bash
-npm install
-```
-
-### **Run the Server**
-
-```bash
-npm start
-```
-
-### **Build Styles and Scripts**
-
-```bash
-npm run build
-```
-
----
-
-## **Additional Notes**
-
-### **Assets**
-
-All product, banner, and collection images are stored in the `/assets` folder. Refer to the `data/products.json` and `data/collections.json` files for mappings.
-
-### **Testing the Application**
-
-Visit `http://localhost:3000` in your browser to view the simulator in action.
-
----
-
-Feel free to customize the simulator further to match your requirements. Happy coding! 🚀
-
-For more information about Liquid, refer to the [official Liquid documentation](https://liquidjs.com/tutorials/intro-to-liquid.html).
+1. Tener instalado Node.js y npm/yarn
+2. Tener instalado editor de codigo (Visual studio code)
+2. Tener instalado git y github
