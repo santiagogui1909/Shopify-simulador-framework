@@ -1,9 +1,14 @@
 <header class="header__container">
-    <h1 class="logo">
+
+    <button class="nav__toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <div class="logo">
         <span class="fa-solid fa-diamond"></span>
-        {{ "shuffle" | upcase }}
+        <h1> {{ "shuffle" | upcase }} </h1>
         <span class="logo__store">{{ "store" | upcase }}</span>
-    </h1>
+    </div>
 
     <ul class="payment__list">
         <p>we accept</p>
@@ -14,9 +19,15 @@
         <li class="fa-solid fa-dollar-sign"></li>
     </ul>
 
-    <nav>
-        <a href="/collections/all" class="nav__links">all products</a>
-        <a href="/collections" class="nav__links">collections</a>
-        <button class="nav__button fas fa-shopping-cart"></button>
+    <nav class="nav">
+        <div class="nav__menu">
+            <a href="#/collections/all" class="nav__links">All Products</a>
+            <a href="#/collections" class="nav__links">Collections</a>
+        </div>
+        <button class="nav__button">
+            <i class="fas fa-shopping-cart"></i>
+        </button>
     </nav>
+
+
 </header>
